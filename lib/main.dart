@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:test_app/src/dependencies/injection.dart';
 import 'package:test_app/src/presentation/base/app.dart';
 

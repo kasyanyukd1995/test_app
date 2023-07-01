@@ -30,6 +30,7 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                         children: [
                           AppTextField(
+                            initialValue: 'test@gmail.co',
                             hintText: context.s.loginOrEmailTitle,
                             isValueValid: state.isLoginValueValid,
                             textInputType: TextInputType.emailAddress,
@@ -44,9 +45,10 @@ class LoginPage extends StatelessWidget {
                             color: AppColors.secondaryGrey1Color,
                           ),
                           AppTextField(
+                            initialValue: 'thisisrlycoolpas',
                             hintText: context.s.passwordTitle,
                             isValueValid: state.isPasswordValueValid,
-                            obscureText: true,
+                            withObscureTextSwitcher: true,
                             onChanged: (v) => context
                                 .bloc<LoginPageBloc>()
                                 .add(LoginPageEvent.updatePasswordValue(value: v)),
