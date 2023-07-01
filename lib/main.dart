@@ -1,38 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:test_app/dependencies/injection.dart';
-import 'package:test_app/models/dto/login_input_entity.dart';
-import 'package:test_app/presentation/pages/login_page.dart';
-import 'package:test_app/repositories/auth_repository.dart';
-import 'package:test_app/services/auth_api_service.dart';
-import 'package:test_app/shared/app_colors.dart';
+import 'package:http_proxy/http_proxy.dart';
+import 'package:test_app/src/dependencies/injection.dart';
+import 'package:test_app/src/presentation/base/app.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  HttpProxy httpProxy = await HttpProxy.createHttpProxy();
+  httpProxy.host = "192.168.0.176"; // replace with your server ip
+  httpProxy.port = "8082"; // replace with your server port
+  HttpOverrides.global = httpProxy;
   configureDependencies();
   runApp(const MyApp());
-
-  final rep = AuthRepository(AuthApiService.create());
-
-  final res = await rep.login(
-      loginInputEntity: LoginInputEntity(
-    email: 'test@gmail.com',
-    password: 'thisisrlycoolpass',
-  ));
-
-  print(res);
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        brightness: Brightness.light,
-        scaffoldBackgroundColor: AppColors.backgroundColor,
-      ),
-      home: const LoginPage(),
-    );
-  }
 }

@@ -28,6 +28,12 @@ dependencies:
   chopper: ^6.1.4
   chopper_generator: ^6.0.2
   json_annotation: ^4.8.1
+  http_proxy: ^1.2.1
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  flutter_gen_runner: ^5.3.1
+  flutter_svg: ^2.0.5
 
 dev_dependencies:
   flutter_test:
@@ -39,3 +45,31 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: false
+  assets: # generate assets using build_runner
+    - assets/icons/
+
+  fonts:
+    - family: Monrope
+      fonts:
+        - asset: assets/font/Manrope-Bold.ttf
+        - asset: assets/font/Manrope-ExtraBold.ttf
+        - asset: assets/font/Manrope-ExtraLight.ttf
+        - asset: assets/font/Manrope-Light.ttf
+        - asset: assets/font/Manrope-Medium.ttf
+        - asset: assets/font/Manrope-Regular.ttf
+        - asset: assets/font/Manrope-SemiBold.ttf
+
+flutter_gen:
+  output: lib/assets/
+  line_length: 100
+  assets:
+    enabled: true
+    outputs:
+      # Assets need to be referenced with the package option, see
+      # https://docs.flutter.dev/development/ui/assets-and-images#from-packages
+      class_name: AppAssets
+
+  # Optional
+  integrations:
+    flutter_svg: true

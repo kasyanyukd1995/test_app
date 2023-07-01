@@ -1,0 +1,19 @@
+{
+    "authTitle": "Authorization",
+    "loginOrEmailTitle": "Login or Email",
+    "passwordTitle": "Password",
+    "logInTitle": "Log In",
+    "logOutTitle": "Log Out",
+    "registrationTitle": "Registration",
+    "profileTitle": "Profile",
+    "favoritesTitle": "Favorites",
+    "mapTitle": "Map",
+    "newslineTitle": "Newline",
+    "error": "Error",
+    "errorContent": "Email or password is not correct!",
+    "cancelButton": "Cancel",
+    "confirmTitle": "Attention!",
+    "confirmContent": "Do you really want to leave?",
+    "yesTitle": "Yes",
+    "noTitle": "No"
+}

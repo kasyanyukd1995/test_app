@@ -1,0 +1,19 @@
+{
+    "authTitle": "Авторизация",
+    "loginOrEmailTitle": "Логин или почта",
+    "passwordTitle": "Пароль",
+    "logInTitle": "Войти",
+    "logOutTitle": "Выйти",
+    "registrationTitle": "Зарегистрироваться",
+    "profileTitle": "Профиль",
+    "favoritesTitle": "Избранные",
+    "mapTitle": "Карта",
+    "newslineTitle": "Лента",
+    "error": "Ошибка",
+    "errorContent": "Почта или пароль введены неверно",
+    "cancelButton": "Закрыть",
+    "confirmTitle": "Внимание!",
+    "confirmContent": "Вы действительно хотите выйти?",
+    "yesTitle": "Да",
+    "noTitle": "Нет"
+}
