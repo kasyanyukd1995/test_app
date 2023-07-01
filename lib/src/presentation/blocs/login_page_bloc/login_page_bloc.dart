@@ -73,6 +73,7 @@ class LoginPageBloc extends Bloc<LoginPageEvent, LoginPageState> {
         }
       }
     } catch (ex) {
+      emit(state.copyWith(isLoading: false));
       await _dialogService.showLoginErrorDialog();
     }
   }
